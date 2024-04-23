@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Street View Embed</title>
+    <style>
+      #street-view {
+        width: 100%;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="street-view"></div>
+    <script>
+      function initialize() {
+        var panorama = new google.maps.StreetViewPanorama(
+          document.getElementById('street-view'),
+          {
+            position: {lat: 39.781721, lng: -89.650148},
+            pov: {heading: 165, pitch: 0},
+            zoom: 1
+          }
+        );
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbYmIEgHaHngjW-EAwZN0GarTxBO2XYo8&callback=initialize" async defer></script>
+  </body>
+</html>
